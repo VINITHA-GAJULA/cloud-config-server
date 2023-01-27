@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  
+  
+  eureka:
+    client:
+      register-with-eureka: true
+      fetch-registry: true
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+      
+
+    
+microservices:
+  order-service:
+    endpoints:
+      endpoint:
+        uri: http://localhost:8081/book/bookOrder
+        
+   order-service:
+     endpoints:
+       endpoint:
+         uri: http://localhost:8082/payment/dopayment
