@@ -1,6 +1,3 @@
-server:
-  port: 8082
-  
   
   eureka:
     client:
@@ -19,7 +16,7 @@ microservices:
       endpoint:
         uri: http://localhost:8081/book/bookOrder
         
-   order-service:
+   payment-service:
      endpoints:
        endpoint:
          uri: http://localhost:8082/payment/dopayment
